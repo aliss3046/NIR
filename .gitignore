@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Data files (если не хочешь хранить большие данные в Git)
+data/*.csv
+data/*.xlsx
+
+# System files
+.DS_Store
+Thumbs.db
