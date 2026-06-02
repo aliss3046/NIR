@@ -1,91 +1,109 @@
-````markdown
-# Grain Market Data Analysis and Price Forecasting
+# Анализ и прогнозирование цен зерновых культур
 
-This project focuses on the analysis and forecasting of grain crop prices using open international statistical data.
+## О проекте
 
-## Project Overview
+Данный проект посвящён анализу мирового рынка зерновых культур и прогнозированию цен на основе открытых статистических данных.
 
-The main goal of the project is to study the dynamics of grain crop prices and build forecasting models based on historical data. The project combines data on grain production and commodity prices, performs exploratory data analysis, and compares several forecasting approaches.
+В рамках работы был сформирован единый набор данных, объединяющий показатели производства зерновых культур и мировые цены на сельскохозяйственную продукцию. Проведён исследовательский анализ данных, изучены взаимосвязи между показателями рынка и выполнено прогнозирование цен с использованием методов машинного обучения и анализа временных рядов.
 
-## Data Sources
+## Цель проекта
 
-The dataset was created using open data from:
+Изучение закономерностей изменения цен на основные зерновые культуры и построение прогнозных моделей на основе исторических данных.
 
-- FAOSTAT — grain crop production data
-- World Bank Commodity Markets — commodity and grain price data
+## Используемые данные
 
-The final dataset covers the period from 2000 to 2024 and includes information about:
+Источники данных:
 
-- wheat
-- maize
-- barley
-- sorghum
-- rice
-- oil prices
-- production indicators
+- FAOSTAT — данные о производстве зерновых культур;
+- World Bank Commodity Markets — данные о мировых товарных рынках и ценах.
 
-## Methods Used
+Исследование охватывает период **2000–2024 гг.**
 
-The project includes:
+Рассматриваемые культуры:
 
-- data cleaning and preprocessing
-- aggregation of monthly price data into yearly indicators
-- descriptive statistics
-- correlation analysis
-- time series analysis
-- price forecasting
-- feature importance analysis
+- пшеница;
+- кукуруза;
+- ячмень;
+- сорго;
+- рис.
 
-The following models were implemented and compared:
+Дополнительно использовались данные о ценах на нефть и объёмах производства сельскохозяйственной продукции.
 
-- Linear Regression
-- ARIMA
-- Random Forest
+## Выполненные задачи
 
-## Main Results
+- сбор и подготовка данных;
+- агрегация и объединение информации из различных источников;
+- расчёт описательной статистики;
+- корреляционный анализ признаков;
+- анализ временных рядов;
+- построение прогнозных моделей;
+- оценка качества моделей;
+- анализ значимости факторов;
+- прогнозирование цен до 2030 года.
 
-The results showed that there is no single universal model that performs best for all crops.
+## Используемые методы
 
-Best models by crop:
+### Анализ данных
 
-| Crop | Best Model | MAE |
-|---|---|---|
-| Wheat | Linear Regression | 16.18 |
-| Maize | Random Forest | 6.72 |
-| Barley | Linear Regression | 20.09 |
-| Sorghum | Random Forest | 11.01 |
-| Rice | Linear Regression | 8.70 |
+- описательная статистика;
+- корреляционный анализ;
+- анализ временных рядов;
+- скользящие средние.
 
-ARIMA showed the weakest results because it uses only historical price values and does not take into account external factors such as oil prices, production volumes, and prices of related crops.
+### Модели прогнозирования
 
-## Forecast
+- Linear Regression;
+- ARIMA;
+- Random Forest.
 
-Using the selected models, a scenario forecast of grain crop prices was built for the period from 2025 to 2030. The forecast suggests moderate price growth for most analyzed crops, assuming that historical trends continue and no major external shocks occur.
+## Основные результаты
 
-## Technologies
+| Культура | Лучшая модель | MAE |
+|-----------|--------------|------|
+| Пшеница | Linear Regression | 16.18 |
+| Кукуруза | Random Forest | 6.72 |
+| Ячмень | Linear Regression | 20.09 |
+| Сорго | Random Forest | 11.01 |
+| Рис | Linear Regression | 8.70 |
+
+Модель ARIMA показала худшие результаты по сравнению с регрессионными и ансамблевыми подходами.
+
+Проведённый анализ выявил сильные взаимосвязи между ценами различных зерновых культур, а также влияние цен на нефть на динамику зернового рынка.
+
+## Прогноз до 2030 года
+
+На основе лучших моделей был построен сценарный прогноз цен до 2030 года.
+
+Результаты показывают сохранение умеренного роста цен на большинство исследуемых культур при условии сохранения текущих тенденций рынка.
+
+## Используемые технологии
 
 - Python
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-- statsmodels
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Statsmodels
+- Jupyter Notebook
 
-## Project Structure
+## Структура проекта
 
 ```text
-.
-├── data/              # Source and processed datasets
-├── notebooks/         # Jupyter notebooks
-├── src/               # Python scripts
-├── results/           # Charts and model outputs
-└── README.md
-````
-
-## Conclusion
-
-The project demonstrates how statistical methods and machine learning models can be used to analyze grain markets, identify relationships between economic indicators, and build price forecasts for agricultural commodities.
-
+grain-market-analysis/
+│
+├── data/
+├── notebooks/
+├── src/
+├── results/
+├── README.md
+└── requirements.txt
 ```
-```
+
+## Автор
+
+Алиса Воронова
+
+Санкт-Петербургский государственный университет
+
+Направление: Прикладная математика и информатика
